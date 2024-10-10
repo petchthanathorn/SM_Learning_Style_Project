@@ -3,14 +3,14 @@ version: '3.8'
 services:
   frontend:
     build:
-      context: ./frontend
+      context: ./drillergo-app
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
     depends_on:
       - backend
     volumes:
-      - ./frontend:/usr/src/app
+      - ./drillergo-app:/usr/src/app
 
   backend:
     build:
